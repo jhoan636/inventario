@@ -20,7 +20,7 @@ public class Usuario {
     private Integer edad;
 
     @Column(nullable = false)
-    private String cargo;
+    private Cargo cargo;
 
     @Column(name = "fecha_ingreso", nullable = false)
     private LocalDate fechaIngreso;
