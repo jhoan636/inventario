@@ -14,7 +14,7 @@ public class Mercancia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, length = 100)
     private String nombre;
 
     @Column(nullable = false)
@@ -23,11 +23,11 @@ public class Mercancia {
     @Column(name = "fecha_ingreso", nullable = false)
     private LocalDate fechaIngreso;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_registro_id", nullable = false)
     private Usuario usuarioRegistro;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_modificacion_id")
     private Usuario usuarioModificacion;
 

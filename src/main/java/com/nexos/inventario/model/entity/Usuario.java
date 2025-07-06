@@ -6,7 +6,7 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "usuarios")
 @Data
 public class Usuario {
     @Id
@@ -19,11 +19,8 @@ public class Usuario {
     @Column(nullable = false)
     private Integer edad;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(
-            name = "cargo_id",
-            nullable = false
-    )
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "cargo_id", nullable = false)
     private Cargo cargo;
 
     @Column(name = "fecha_ingreso", nullable = false)
