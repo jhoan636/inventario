@@ -6,17 +6,17 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class UpdateMercanciaDTO {
+public class ActualizarMercanciaDTO {
 
     @NotNull
     private Long id;
-    
+
     @NotBlank(message = "El nombre del producto es obligatorio")
-    @Size(max = 150)
+    @Size(max = 100, message = "El nombre del producto no puede exceder 100 caracteres")
     private String nombre;
 
-    @NotNull(message = "El nombre del producto es obligatorio")
-    @Min(0)
+    @NotNull(message = "La cantidad es obligatoria")
+    @Min(value = 1, message = "La cantidad debe ser mayor a 0")
     private Integer cantidad;
 
     @NotNull(message = "La fecha de ingreso del producto es obligatoria")

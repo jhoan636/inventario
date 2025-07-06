@@ -7,10 +7,10 @@ import java.time.LocalDate;
 @Data
 public class MercanciaDTO {
     private Long id;
-    private String nombre;
+    private String nombreProducto;
     private Integer cantidad;
     private LocalDate fechaIngreso;
+    private UsuarioDTO usuarioRegistro;
+    private UsuarioDTO usuarioModificacion;
     private LocalDate fechaModificacion;
-    private UsuarioDTO creador;
-    private UsuarioDTO modificador;
 }

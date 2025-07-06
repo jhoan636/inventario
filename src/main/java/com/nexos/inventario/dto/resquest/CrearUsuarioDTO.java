@@ -6,7 +6,7 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class CreateUsuarioDTO {
+public class CrearUsuarioDTO {
     @NotBlank
     @Size(max = 100, message = "El nombre no puede estar vacío ni exceder 100 caracteres")
     private String nombre;

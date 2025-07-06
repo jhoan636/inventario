@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-public class CreateCargoDTO {
+public class CrearCargoDTO {
 
     @NotBlank(message = "El nombre del rol es obligatorio")
     @Size(max = 50, message = "El nombre no puede exceder 50 caracteres")
