@@ -7,5 +7,4 @@ import java.util.Optional;
 
 public interface CargoRepository extends JpaRepository<Cargo, Long> {
     Optional<Cargo> findByNombre(String nombre);
-
 }

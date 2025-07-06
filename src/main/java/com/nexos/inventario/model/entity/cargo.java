@@ -2,10 +2,12 @@ package com.nexos.inventario.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "cargos")
 @Data
+@NoArgsConstructor
 public class Cargo {
 
     @Id
@@ -14,4 +16,8 @@ public class Cargo {
 
     @Column(unique = true, nullable = false, length = 50)
     private String nombre;
+
+    public Cargo(String nombre) {
+        this.nombre = nombre;
+    }
 }
