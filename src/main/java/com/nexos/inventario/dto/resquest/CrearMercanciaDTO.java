@@ -21,5 +21,5 @@ public class CrearMercanciaDTO {
     private LocalDate fechaIngreso;
 
     @NotNull(message = "El usuario asociado al producto es obligatoria")
-    private Long UsuarioRegistroId;
+    private Long usuarioRegistroId;
 }
