@@ -112,6 +112,7 @@ public class MercanciaService implements IMercanciaService {
                 .cantidad(mercancia.getCantidad())
                 .fechaIngreso(mercancia.getFechaIngreso())
                 .usuarioRegistro(UsuarioDTO.builder()
+                        .id(mercancia.getUsuarioModificacion().getId())
                         .nombre(mercancia.getUsuarioRegistro().getNombre()).build())
                 .usuarioModificacion(
                         mercancia.getUsuarioModificacion() != null
