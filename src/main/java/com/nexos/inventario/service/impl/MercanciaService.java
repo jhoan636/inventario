@@ -116,6 +116,7 @@ public class MercanciaService implements IMercanciaService {
                 .usuarioModificacion(
                         mercancia.getUsuarioModificacion() != null
                                 ? UsuarioDTO.builder()
+                                .id(mercancia.getUsuarioModificacion().getId())
                                 .nombre(mercancia.getUsuarioModificacion().getNombre())
                                 .build()
                                 : null)
