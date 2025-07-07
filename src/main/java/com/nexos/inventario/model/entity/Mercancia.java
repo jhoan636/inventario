@@ -33,4 +33,7 @@ public class Mercancia {
 
     @Column(name = "fecha_modificacion")
     private LocalDateTime fechaModificacion;
+
+    @Column(nullable = false)
+    private Boolean activo = true;
 }
